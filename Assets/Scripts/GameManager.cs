@@ -48,12 +48,7 @@ public class GameManager : MonoBehaviour
     {
         Instantiate(prefab, spawnPoint.position, Quaternion.identity, transform);
     }
-
-    public void GoNextLevel()
-    {
-        int n = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene((n+1)%SceneManager.sceneCountInBuildSettings);
-    }
+    
 }
 
 
