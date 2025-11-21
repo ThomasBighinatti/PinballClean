@@ -1,8 +1,10 @@
+using System;
+using TMPro;
 using UnityEngine;
 
 public class LevelGoal : MonoBehaviour
 {
-
+    [SerializeField] private TextMeshProUGUI text;
     public enum GoalType
     {
         Score,
@@ -17,4 +19,9 @@ public class LevelGoal : MonoBehaviour
     public string triggerName;
 
     public bool goalCompleted = false;
+
+    private void Start()
+    {
+        text.text = goalType.ToString();
+    }
 }
