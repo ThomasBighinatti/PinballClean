@@ -20,6 +20,7 @@ public class LevelManager : MonoBehaviour
             case LevelGoal.GoalType.Score:
                 if (ScoreManager.score >= goal.targetScore)
                 {
+                    Debug.Log("asterion");
                     CompleteLevel();
                 }
                 break;
