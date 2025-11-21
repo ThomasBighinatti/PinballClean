@@ -1212,7 +1212,7 @@ GameObject:
   - component: {fileID: 613862631}
   m_Layer: 7
   m_Name: Paddle Right
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1597,7 +1597,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8243ffd04296a4d85ceb81c64f2e28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
   text: {fileID: 1752538705}
 --- !u!1 &769974425
 GameObject:
@@ -3201,7 +3200,7 @@ GameObject:
   - component: {fileID: 1616633640}
   m_Layer: 7
   m_Name: Paddle Left
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
