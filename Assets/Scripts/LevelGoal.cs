@@ -22,6 +22,15 @@ public class LevelGoal : MonoBehaviour
 
     private void Start()
     {
-        text.text = goalType.ToString();
+        
+    }
+    void Update()
+    {
+        if (goalType == GoalType.SurviveTime)
+        {
+            text.text = "Temps à survivre :" + LevelManager.timer.ToString();
+        }
     }
 }
+
+    

@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     public LevelGoal goal;
 
-    private float timer = 0f;
+    public static float timer = 0f;
     private bool isLevelActive = true;
 
 
@@ -20,7 +20,6 @@ public class LevelManager : MonoBehaviour
             case LevelGoal.GoalType.Score:
                 if (ScoreManager.score >= goal.targetScore)
                 {
-                    Debug.Log("asterion");
                     CompleteLevel();
                 }
                 break;
