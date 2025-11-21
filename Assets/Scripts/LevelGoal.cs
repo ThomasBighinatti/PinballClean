@@ -29,6 +29,8 @@ public class LevelGoal : MonoBehaviour
         if (goalType == GoalType.SurviveTime)
         {
             text.text = "Temps à survivre :" + LevelManager.timer.ToString();
+            
+            //TODO
         }
     }
 }
