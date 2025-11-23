@@ -28,9 +28,15 @@ public class LevelGoal : MonoBehaviour
     {
         if (goalType == GoalType.SurviveTime)
         {
-            text.text = "Temps à survivre :" + LevelManager.timer.ToString();
-            
-            //TODO
+            text.text = "Time to survive : " + LevelManager.timer.ToString();
+        }
+        else if (goalType == GoalType.ReachTrigger)
+        {
+            text.text = "Reach the purple trigger";
+        }
+        else if (goalType == GoalType.Score)
+        {
+            text.text = "Score objective : " + targetScore.ToString();
         }
     }
 }
