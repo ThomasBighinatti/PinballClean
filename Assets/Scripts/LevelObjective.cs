@@ -10,7 +10,6 @@ public class LevelObjective : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("caca");
             levelManager.CompleteLevel();
         }
     }

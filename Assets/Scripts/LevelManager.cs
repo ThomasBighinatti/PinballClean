@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -51,5 +52,11 @@ public class LevelManager : MonoBehaviour
         goal.goalCompleted = true;
         int n = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene((n+1)%SceneManager.sceneCountInBuildSettings);
+    }
+
+    private void Start()
+    {
+        timer = 0;
+        ScoreManager.score = 0;
     }
 }

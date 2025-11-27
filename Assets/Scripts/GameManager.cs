@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,9 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] private int life = 3;
+    [SerializeField] private int life = 4;
     [SerializeField] GameObject prefab;
     [SerializeField] private Transform spawnPoint;
+    [SerializeField] private TextMeshProUGUI ballsLeft;
     
     private void Awake()
     {
@@ -23,10 +25,8 @@ public class GameManager : MonoBehaviour
 
     public void LoseBall()
     {
-        Debug.Log("Lose Ball");
-
         life = life - 1;
-        Debug.Log("lives left: " + life);
+        ballsLeft.text = "Balls left : " + life;
         if (GameOver())
         {
             SpawnBall();
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     public bool GameOver()
     {
-        if (life < 0)
+        if (life == 0)
         {
             Debug.Log("Game Over");
             return false;

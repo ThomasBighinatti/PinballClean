@@ -8,7 +8,7 @@ public class Bumper : MonoBehaviour
     [SerializeField] private Animation anim;
     void OnCollisionEnter(Collision other)
     {
-        //Debug.Log(transform.position);
+        Debug.Log(transform.position);
         Vector3 a = transform.position;
         Vector3 b = other.transform.position;
         Vector3 direction;

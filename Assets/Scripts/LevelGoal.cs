@@ -36,7 +36,7 @@ public class LevelGoal : MonoBehaviour
         }
         else if (goalType == GoalType.Score)
         {
-            text.text = "Score objective : " + targetScore.ToString();
+            text.text = "Targer score : " + targetScore.ToString();
         }
     }
 }
