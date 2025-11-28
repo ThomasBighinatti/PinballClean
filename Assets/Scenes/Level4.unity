@@ -1642,6 +1642,7 @@ MonoBehaviour:
   life: 3
   prefab: {fileID: 209263509873612075, guid: 00ff78036a9e3ea408b6a08e2e04dd42, type: 3}
   spawnPoint: {fileID: 1240687497}
+  ballsLeft: {fileID: 0}
 --- !u!4 &733334767
 Transform:
   m_ObjectHideFlags: 0
@@ -4205,7 +4206,7 @@ GameObject:
   - component: {fileID: 1682122764}
   - component: {fileID: 1682122763}
   - component: {fileID: 1682122762}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Shooter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
