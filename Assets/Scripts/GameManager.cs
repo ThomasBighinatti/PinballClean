@@ -26,11 +26,12 @@ public class GameManager : MonoBehaviour
     public void LoseBall()
     {
         life = life - 1;
-        ballsLeft.text = "Balls left : " + life;
+        
         if (GameOver())
         {
             SpawnBall();
         }
+        ballsLeft.text = "Balls left : " + life;
     }
 
     public bool GameOver()
