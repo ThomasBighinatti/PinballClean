@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Game Over");
             return false;
+            
         }
 
         return true;

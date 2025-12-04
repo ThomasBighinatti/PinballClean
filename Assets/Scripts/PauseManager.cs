@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
+    public GameManager GameManager; 
     public GameObject pauseMenuUI;
     public Button pauseButton;
     [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
@@ -68,4 +69,13 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene(scene.name);
         Resume();
     }
+
+    public void GameOverScreen()
+    {
+        if (GameManager.GameOver() == false) ;
+        //todo
+    }
+    
+    
+    
 }
