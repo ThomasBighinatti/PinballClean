@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LevelGoal : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI goal;
+    [SerializeField] private TextMeshProUGUI timeSurvived;
     public enum GoalType
     {
         Score,
@@ -28,15 +29,16 @@ public class LevelGoal : MonoBehaviour
     {
         if (goalType == GoalType.SurviveTime)
         {
-            text.text = "Time to survive : " + LevelManager.timer.ToString();
+            goal.text = "Time to survive : " + surviveDuration.ToString();
+            timeSurvived.text = "Time survived : " + Mathf.Round(LevelManager.timer).ToString();
         }
         else if (goalType == GoalType.ReachTrigger)
         {
-            text.text = "Reach the purple trigger";
+            goal.text = "Reach the purple trigger";
         }
         else if (goalType == GoalType.Score)
         {
-            text.text = "Targer score : " + targetScore.ToString();
+            goal.text = "Targer score : " + targetScore.ToString();
         }
     }
 }
