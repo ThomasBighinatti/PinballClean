@@ -5,10 +5,12 @@ using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
+	[SerializeField] private GameObject gameOverMenu;
     public GameManager GameManager; 
     public GameObject pauseMenuUI;
     public Button pauseButton;
     [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
+	
     private bool isPaused = false;
 
     void Start()
@@ -26,6 +28,8 @@ public class PauseManager : MonoBehaviour
         {
             TogglePause();
         }
+
+        GameOverScreen();
     }
     
     
@@ -57,23 +61,23 @@ public class PauseManager : MonoBehaviour
         isPaused = true;
     }
 
-    public void QuitGame()
-    {
-        Debug.Log("Le jeu se ferme");
-        Application.Quit();
-    }
+
 
     public void ReloadScene()
     {
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-        Resume();
+        Time.timeScale = 1f;
+        gameOverMenu.SetActive(false);
     }
 
     public void GameOverScreen()
     {
-        if (GameManager.GameOver() == false) ;
-        //todo
+        if (GameManager.GameOver() == false)
+        {
+            Time.timeScale = 0f;
+            gameOverMenu.SetActive(true);
+        }
     }
     
     

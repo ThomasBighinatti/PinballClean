@@ -26,7 +26,6 @@ public class GameManager : MonoBehaviour
     public void LoseBall()
     {
         life = life - 1;
-        
         if (GameOver())
         {
             SpawnBall();
@@ -36,11 +35,9 @@ public class GameManager : MonoBehaviour
 
     public bool GameOver()
     {
-        if (life == 0)
+        if (life <= 0)
         {
-            Debug.Log("Game Over");
             return false;
-            
         }
 
         return true;
@@ -51,6 +48,11 @@ public class GameManager : MonoBehaviour
         Instantiate(prefab, spawnPoint.position, Quaternion.identity, transform);
     }
     
+    public void QuitGame()
+    {
+        Debug.Log("Le jeu se ferme");
+        Application.Quit();
+    }
 }
 
 

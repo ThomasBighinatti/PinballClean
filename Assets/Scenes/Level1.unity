@@ -324,7 +324,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 733334768}
         m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
         m_MethodName: ReloadScene
         m_Mode: 1
@@ -1277,7 +1277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b40388f996c9fd45a07f208e80c8036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameManager: {fileID: 0}
+  gameOverMenu: {fileID: 651079062}
+  GameManager: {fileID: 733334766}
   pauseMenuUI: {fileID: 1376160943}
   pauseButton: {fileID: 1885847749}
   pauseKey: 27
@@ -1652,8 +1653,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseManager, Assembly-CSharp
+      - m_Target: {fileID: 733334766}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
