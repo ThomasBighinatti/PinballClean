@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject prefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI ballsLeft;
+    [SerializeField] private PauseManager pauseManager;
     
     private void Awake()
     {
@@ -26,21 +27,20 @@ public class GameManager : MonoBehaviour
     public void LoseBall()
     {
         life = life - 1;
-        if (GameOver())
-        {
-            SpawnBall();
-        }
         ballsLeft.text = "Balls left : " + life;
+        CheckGameOver();
     }
 
-    public bool GameOver()
+    public void CheckGameOver()
     {
         if (life <= 0)
         {
-            return false;
+            pauseManager.GameOverScreen();
         }
-
-        return true;
+        else
+        {
+            SpawnBall();
+        }
     }
 
     void SpawnBall()

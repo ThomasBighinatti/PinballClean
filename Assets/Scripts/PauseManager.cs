@@ -26,10 +26,11 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(pauseKey))
         {
-            TogglePause();
+            if (!gameOverMenu.activeSelf)
+            {
+                TogglePause();
+            }
         }
-
-        GameOverScreen();
     }
     
     
@@ -38,12 +39,10 @@ public class PauseManager : MonoBehaviour
         if (isPaused)
         {
             Resume();
-            Debug.Log("Resume");
         }
         else
         {
             Pause();
-            Debug.Log("Pause");
         }
     }
 
@@ -65,19 +64,16 @@ public class PauseManager : MonoBehaviour
 
     public void ReloadScene()
     {
+        Time.timeScale = 1f;
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
-        Time.timeScale = 1f;
         gameOverMenu.SetActive(false);
     }
 
     public void GameOverScreen()
     {
-        if (GameManager.GameOver() == false)
-        {
             Time.timeScale = 0f;
             gameOverMenu.SetActive(true);
-        }
     }
     
     
