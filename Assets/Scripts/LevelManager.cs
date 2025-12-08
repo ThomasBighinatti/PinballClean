@@ -7,7 +7,8 @@ public class LevelManager : MonoBehaviour
     public LevelGoal goal;
 
     public static float timer = 0f;
-    private bool isLevelActive = true;
+    public bool isLevelActive = true;
+    [SerializeField] private PauseManager pauseManager;
 
 
     void Update()
@@ -46,12 +47,13 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void CompleteLevel()
+    public bool CompleteLevel()
     {
         isLevelActive = false;
         goal.goalCompleted = true;
-        int n = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene((n+1)%SceneManager.sceneCountInBuildSettings);
+        Time.timeScale = 0f;
+        pauseManager.LevelCompleteScreen();
+        return true;
     }
 
     private void Start()
@@ -59,4 +61,5 @@ public class LevelManager : MonoBehaviour
         timer = 0;
         ScoreManager.score = 0;
     }
+    
 }

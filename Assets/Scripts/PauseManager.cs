@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 public class PauseManager : MonoBehaviour
 {
-	[SerializeField] private GameObject gameOverMenu;
-    public GameManager GameManager; 
-    public GameObject pauseMenuUI;
-    public Button pauseButton;
+    #region SerializeFields
+    [SerializeField] private GameManager gameManager;
+    [SerializeField, Space] private LevelManager levelManager;
+    [SerializeField] private GameObject gameOverMenu;
+    [SerializeField] private GameObject levelCompletedMenu;
+    [SerializeField, Space] private GameObject pauseMenuUI;
+    [SerializeField] private Button pauseButton;
     [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
+    #endregion
+    
 	
     private bool isPaused = false;
 
@@ -26,7 +31,7 @@ public class PauseManager : MonoBehaviour
     {
         if (Input.GetKeyDown(pauseKey))
         {
-            if (!gameOverMenu.activeSelf)
+            if ((!gameOverMenu.activeSelf) && (!levelCompletedMenu.activeSelf))
             {
                 TogglePause();
             }
@@ -75,7 +80,17 @@ public class PauseManager : MonoBehaviour
             Time.timeScale = 0f;
             gameOverMenu.SetActive(true);
     }
+
+    public void LevelCompleteScreen()
+    {
+            levelCompletedMenu.SetActive(true);
+    }
     
-    
-    
+    public void NextLevel()
+    {
+        levelCompletedMenu.SetActive(false);
+            int n = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene((n+1)%SceneManager.sceneCountInBuildSettings);
+        
+    }
 }

@@ -1915,6 +1915,7 @@ MonoBehaviour:
   prefab: {fileID: 209263509873612075, guid: 00ff78036a9e3ea408b6a08e2e04dd42, type: 3}
   spawnPoint: {fileID: 1240687497}
   ballsLeft: {fileID: 2001262062}
+  pauseManager: {fileID: 733334768}
 --- !u!4 &733334767
 Transform:
   m_ObjectHideFlags: 0
@@ -1942,6 +1943,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b40388f996c9fd45a07f208e80c8036, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 733334766}
+  levelManager: {fileID: 1115751862}
+  gameOverMenu: {fileID: 0}
+  levelCompletedMenu: {fileID: 0}
   pauseMenuUI: {fileID: 1376160943}
   pauseButton: {fileID: 1885847749}
   pauseKey: 27
@@ -2784,6 +2789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goal: {fileID: 1115751861}
+  isLevelActive: 1
+  pauseManager: {fileID: 733334768}
 --- !u!4 &1115751863
 Transform:
   m_ObjectHideFlags: 0
