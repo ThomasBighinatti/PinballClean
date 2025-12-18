@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     public static float timer = 0f;
     public bool isLevelActive = true;
     [SerializeField] private PauseManager pauseManager;
+    
 
 
     void Update()
@@ -61,5 +62,6 @@ public class LevelManager : MonoBehaviour
         timer = 0;
         ScoreManager.score = 0;
     }
+
     
 }
