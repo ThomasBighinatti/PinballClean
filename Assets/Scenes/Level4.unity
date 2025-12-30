@@ -1274,9 +1274,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c7a81d8543cd646b00e42d681dd35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 250
+  strength: 3
   score: 10
-  anim: {fileID: 320616159}
 --- !u!136 &320616164
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1547,7 +1546,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 250
   score: 10
-  anim: {fileID: 363745285}
 --- !u!136 &363745290
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4168,7 +4166,7 @@ HingeJoint:
   m_UseSpring: 1
   m_Spring:
     spring: 1000
-    damper: 0
+    damper: 7
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -4204,6 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hingeJoint: {fileID: 1292466941}
   key: 275
+  alternativeKey: 100
   targetPosition: -50
   originPosition: 0
 --- !u!65 &1292466947
@@ -4286,6 +4285,10 @@ PrefabInstance:
     - target: {fileID: 958334877814467608, guid: 7f267e1d230150340a654e923cf2609a, type: 3}
       propertyPath: m_TagString
       value: Paddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509416221597966384, guid: 7f267e1d230150340a654e923cf2609a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2535815734443690623, guid: 7f267e1d230150340a654e923cf2609a, type: 3}
@@ -4421,9 +4424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c7a81d8543cd646b00e42d681dd35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 300
+  strength: 3
   score: 10
-  anim: {fileID: 1305799494}
 --- !u!136 &1305799499
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4782,9 +4784,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06c7a81d8543cd646b00e42d681dd35d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 250
+  strength: 3
   score: 10
-  anim: {fileID: 1372036384}
 --- !u!1 &1379584723
 GameObject:
   m_ObjectHideFlags: 0
@@ -5530,8 +5531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfcba3a6c2377743bbbaccddc1ddb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 70
+  strength: 1.5
   score: 10
+  anim: {fileID: 0}
 --- !u!4 &1476451834 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4990365524786018649, guid: 86a2632b6a59b6f4eb27045f5854a597, type: 3}
@@ -7405,6 +7407,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 1509416221597966384, guid: 7f267e1d230150340a654e923cf2609a, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2535815734443690623, guid: 7f267e1d230150340a654e923cf2609a, type: 3}
     m_RemovedGameObjects: []
@@ -7438,7 +7444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hingeJoint: {fileID: 1972547360}
-  key: 276
+  key: 97
+  alternativeKey: 113
   targetPosition: 50
   originPosition: 0
 --- !u!4 &1972547359 stripped
@@ -7463,7 +7470,7 @@ HingeJoint:
   m_UseSpring: 1
   m_Spring:
     spring: 1000
-    damper: 0
+    damper: 7
     targetPosition: 0
   m_UseMotor: 0
   m_Motor:
@@ -8082,8 +8089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfcba3a6c2377743bbbaccddc1ddb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 50
+  strength: 1.5
   score: 10
+  anim: {fileID: 0}
 --- !u!4 &2066595518 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 200355668039852096, guid: a1e7126b78c286248b29f182402a3bdf, type: 3}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8607649332126423490}
   - component: {fileID: 7718825469485697660}
   - component: {fileID: 4839307765701352302}
+  - component: {fileID: -4610556532905565181}
   m_Layer: 0
   m_Name: Flat Bumper
   m_TagString: Untagged
@@ -121,4 +122,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfcba3a6c2377743bbbaccddc1ddb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strength: 50
+  strength: 1.5
+  score: 10
+  anim: {fileID: 0}
+--- !u!114 &-4610556532905565181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3801238799862754158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2db5152dec65c84781493d7db54ac22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hdrIntensity: 4

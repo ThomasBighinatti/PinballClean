@@ -1705,6 +1705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hingeJoint: {fileID: 613862632}
   key: 275
+  alternativeKey: 100
   targetPosition: 50
   originPosition: 0
 --- !u!59 &613862632
@@ -1772,7 +1773,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2
 --- !u!65 &613862634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4633,6 +4634,10 @@ PrefabInstance:
       value: 1.5470353
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.251
       objectReference: {fileID: 0}
@@ -5278,7 +5283,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 3
+  m_CollisionDetection: 2
 --- !u!65 &1616633636
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5381,7 +5386,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hingeJoint: {fileID: 1616633634}
-  key: 276
+  key: 97
+  alternativeKey: 113
   targetPosition: 50
   originPosition: 0
 --- !u!111 &1636224812 stripped

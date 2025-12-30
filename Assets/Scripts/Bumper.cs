@@ -5,7 +5,14 @@ public class Bumper : MonoBehaviour
 {
     [SerializeField] float strength = 10f;
     [SerializeField] private int score = 10;
-    [SerializeField] private Animation anim;
+    
+    private BumperVisuals visualScript;
+
+    private void Start()
+    {
+        visualScript = GetComponent<BumperVisuals>();
+    }
+
     void OnCollisionEnter(Collision other)
     {
         Debug.Log(transform.position);
@@ -14,15 +21,14 @@ public class Bumper : MonoBehaviour
         Vector3 direction;
         direction = b - a;
         direction = direction.normalized;
-        
-        other.rigidbody.AddForce(direction*strength);
+
+        other.rigidbody.AddForce(direction * strength, ForceMode.Impulse);
         
         ScoreManager.instance.AddScore(score);
-
-        if (anim != null)
+        
+        if (visualScript != null)
         {
-            anim.Play();
+            visualScript.ActiverAnimation();
         }
-
     }
 }

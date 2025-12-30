@@ -3,22 +3,26 @@ using UnityEngine;
 public class Paddle : MonoBehaviour
 {
     [SerializeField] HingeJoint hingeJoint;
+    
+    [Header("Controles")]
     [SerializeField] KeyCode key = KeyCode.Space;
+    [SerializeField] KeyCode alternativeKey = KeyCode.None;
+
+    [Header("Positions")]
     [SerializeField] float targetPosition = 75f;
     [SerializeField] float originPosition;
+    
 
     JointSpring jointSpring;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         jointSpring = hingeJoint.spring;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(key))
+        if (Input.GetKey(key) || Input.GetKey(alternativeKey))
         {
             jointSpring.targetPosition = targetPosition;
         }
