@@ -804,7 +804,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.10894843, g: 0.4716981, b: 0.09567462, a: 0}
+  m_BackGroundColor: {r: 0.005384479, g: 0.030684553, b: 0.103773594, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2317,6 +2317,8 @@ MonoBehaviour:
   spawnPoint: {fileID: 1240687497}
   ballsLeft: {fileID: 1581368759}
   pauseManager: {fileID: 733334768}
+  ballMaterial: {fileID: 2100000, guid: ec9f5bf178befa94ca482eb9db2f259e, type: 2}
+  trailMaterial: {fileID: 0}
 --- !u!4 &733334767
 Transform:
   m_ObjectHideFlags: 0
