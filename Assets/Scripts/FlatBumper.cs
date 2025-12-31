@@ -20,12 +20,15 @@ public class BumperNormal : MonoBehaviour
     {
         Vector3 ballDirection = other.relativeVelocity;
         Vector3 normal = -other.contacts[0].normal;
-        Vector3 direction = Vector3.Reflect(ballDirection, normal);
+        
+        //normalise pour eviter que quand on touche plusieurs bumpers la balle accelere de facon exponentielle
+        Vector3 direction = Vector3.Reflect(ballDirection, normal).normalized;
         
         Debug.DrawRay(other.contacts[0].point, direction, Color.red, 10);
         Debug.DrawRay(other.contacts[0].point, normal, Color.blue, 10);
-
+        
         other.rigidbody.AddForce(direction * strength, ForceMode.Impulse);
+        
         ScoreManager.instance.AddScore(score);
         
         if (visuals != null)
