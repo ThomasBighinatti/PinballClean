@@ -21,24 +21,26 @@ public class Bumper : MonoBehaviour
         other.rigidbody.AddForce(direction * strength, ForceMode.Impulse);
         
         ScoreManager.instance.AddScore(score);
-        
-        if (scorePopup != null)
+
+        if (LevelManager.instance != null && LevelManager.instance.goal.goalType == LevelGoal.GoalType.Score)
         {
-            // position
-            Vector3 spawnPos = transform.position;
-            spawnPos.y += 0.5f;
-            spawnPos.z = -1.5f;
-            
-            GameObject popup = Instantiate(scorePopup, spawnPos, Quaternion.identity);
-            
-            ScorePopup scoreScript = popup.GetComponent<ScorePopup>();
-            if (scoreScript != null)
+            if (scorePopup != null)
             {
-                // couleur du bumper
-                Color bumperColor = GetComponent<Renderer>().material.color;
-                scoreScript.Setup(score, bumperColor);
+                Vector3 spawnPos = transform.position + Vector3.up * 0.5f;
+                spawnPos.z = 0f;
+
+                GameObject popup = Instantiate(scorePopup, spawnPos, Quaternion.identity);
+
+                ScorePopup scoreScript = popup.GetComponent<ScorePopup>();
+                if (scoreScript != null)
+                {
+                    //couleur
+                    Color bumperColor = GetComponent<Renderer>().material.color;
+                    scoreScript.Setup(score, bumperColor);
+                }
             }
         }
+
         if (visualScript != null)
         {
             visualScript.ActiverAnimation();

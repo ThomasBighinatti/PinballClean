@@ -6,7 +6,7 @@ public class BumperNormal : MonoBehaviour
 {
     private BumperVisuals visuals;
     
-    [SerializeField] private GameObject pfScorePopup;
+    [SerializeField] private GameObject scorePopup;
 
     private void Start()
     {
@@ -27,20 +27,22 @@ public class BumperNormal : MonoBehaviour
         
         ScoreManager.instance.AddScore(score);
         
-        if (pfScorePopup != null)
+        if (LevelManager.instance != null && LevelManager.instance.goal.goalType == LevelGoal.GoalType.Score)
         {
-            Vector3 spawnPos = other.contacts[0].point;
-            spawnPos.y += 0.5f;
-            spawnPos.z = -1.5f;
-            
-            GameObject popup = Instantiate(pfScorePopup, spawnPos, Quaternion.identity);
-            
-            ScorePopup scoreScript = popup.GetComponent<ScorePopup>();
-            if (scoreScript != null)
+            if (scorePopup != null)
             {
-                // couleur de ce bumper
-                Color bumperColor = GetComponent<Renderer>().material.color;
-                scoreScript.Setup(score, bumperColor);
+                Vector3 spawnPos = other.contacts[0].point + Vector3.up * 0.5f;
+                spawnPos.z = 0f;
+
+                GameObject popup = Instantiate(scorePopup, spawnPos, Quaternion.identity);
+                 
+                ScorePopup scoreScript = popup.GetComponent<ScorePopup>();
+                if (scoreScript != null)
+                {
+                    //couleur
+                    Color bumperColor = GetComponent<Renderer>().material.color;
+                    scoreScript.Setup(score, bumperColor);
+                }
             }
         }
         

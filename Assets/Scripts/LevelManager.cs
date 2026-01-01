@@ -10,7 +10,13 @@ public class LevelManager : MonoBehaviour
     public bool isLevelActive = true;
     [SerializeField] private PauseManager pauseManager;
 
+    public static LevelManager instance;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+    
     void Update()
     {
         if (!isLevelActive) return;
