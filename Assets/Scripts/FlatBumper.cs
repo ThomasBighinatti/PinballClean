@@ -27,7 +27,7 @@ public class BumperNormal : MonoBehaviour
         
         ScoreManager.instance.AddScore(score);
         
-        if (LevelManager.instance != null && LevelManager.instance.goal.goalType == LevelGoal.GoalType.Score)
+        if (score > 0 && LevelManager.instance != null && LevelManager.instance.goal.goalType == LevelGoal.GoalType.Score) //si bumper donne pas 0 de score + type de score
         {
             if (scorePopup != null)
             {
