@@ -127,6 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   strength: 3
   score: 10
+  scorePopup: {fileID: 6272300248988164964, guid: 9d7f198c3b754c447aded21a79112e5c, type: 3}
 --- !u!111 &3309146678143391475
 Animation:
   m_ObjectHideFlags: 0

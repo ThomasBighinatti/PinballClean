@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BumperNormal : MonoBehaviour
 {
-
     private BumperVisuals visuals;
+    
+    [SerializeField] private GameObject pfScorePopup;
 
     private void Start()
     {
@@ -14,22 +15,34 @@ public class BumperNormal : MonoBehaviour
 
     public float strength = 1;
     [SerializeField] private int score = 10;
-    [SerializeField] private Animation anim;
     
     void OnCollisionEnter(Collision other)
     {
         Vector3 ballDirection = other.relativeVelocity;
         Vector3 normal = -other.contacts[0].normal;
-        
-        //normalise pour eviter que quand on touche plusieurs bumpers la balle accelere de facon exponentielle
+        //normalisation pour eviter vitesse exponentielle
         Vector3 direction = Vector3.Reflect(ballDirection, normal).normalized;
-        
-        Debug.DrawRay(other.contacts[0].point, direction, Color.red, 10);
-        Debug.DrawRay(other.contacts[0].point, normal, Color.blue, 10);
         
         other.rigidbody.AddForce(direction * strength, ForceMode.Impulse);
         
         ScoreManager.instance.AddScore(score);
+        
+        if (pfScorePopup != null)
+        {
+            Vector3 spawnPos = other.contacts[0].point;
+            spawnPos.y += 0.5f;
+            spawnPos.z = -1.5f;
+            
+            GameObject popup = Instantiate(pfScorePopup, spawnPos, Quaternion.identity);
+            
+            ScorePopup scoreScript = popup.GetComponent<ScorePopup>();
+            if (scoreScript != null)
+            {
+                // couleur de ce bumper
+                Color bumperColor = GetComponent<Renderer>().material.color;
+                scoreScript.Setup(score, bumperColor);
+            }
+        }
         
         if (visuals != null)
         {

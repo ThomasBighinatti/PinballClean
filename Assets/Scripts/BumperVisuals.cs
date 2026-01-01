@@ -31,7 +31,7 @@ public class BumperVisuals : MonoBehaviour
     {
         //changement couleur
         Color32 current32 = originalColor;
-        byte r = (byte)Mathf.Clamp(current32.r + 20, 0, 255);
+        byte r = (byte)Mathf.Clamp(current32.r + 20, 0, 255); //choisi au hasard
         byte g = (byte)Mathf.Clamp(current32.g - 50, 0, 255);
         byte b = (byte)Mathf.Clamp(current32.b - 50, 0, 255);
         
