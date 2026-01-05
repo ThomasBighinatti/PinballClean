@@ -1,7 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.SceneManagement; 
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +12,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI ballsLeft;
     [SerializeField] private PauseManager pauseManager;
+
+    [Header("personnalisation couleurs balle")]
+    [SerializeField] private Material ballMaterial; 
+    [SerializeField] private Material trailMaterial; 
     
     private void Awake()
     {
@@ -45,7 +49,28 @@ public class GameManager : MonoBehaviour
 
     void SpawnBall()
     {
-        Instantiate(prefab, spawnPoint.position, Quaternion.identity, transform);
+        GameObject newBall = Instantiate(prefab, spawnPoint.position, Quaternion.identity, transform);
+        
+        //changement balle
+        if (ballMaterial != null)
+        {
+            Renderer ballRenderer = newBall.GetComponent<Renderer>();
+            if (ballRenderer != null)
+            {
+                ballRenderer.material = ballMaterial;
+            }
+        }
+
+        //changement trail
+        if (trailMaterial != null)
+        {
+            TrailRenderer trail = newBall.GetComponentInChildren<TrailRenderer>();
+            
+            if (trail != null)
+            {
+                trail.material = trailMaterial;
+            }
+        }
     }
     
     public void QuitGame()
@@ -54,5 +79,3 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 }
-
-

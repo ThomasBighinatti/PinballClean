@@ -11,7 +11,13 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private PauseManager pauseManager;
     
 
+    public static LevelManager instance;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+    
     void Update()
     {
         if (!isLevelActive) return;
