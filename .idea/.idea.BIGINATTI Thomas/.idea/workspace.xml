@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="92e9b411-0ccb-445f-801b-f43f29cb2b25" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIGINATTI Thomas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIGINATTI Thomas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScorePopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScorePopup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +112,7 @@
       <workItem from="1765186203878" duration="18784000" />
       <workItem from="1765789736973" duration="426000" />
       <workItem from="1765790261035" duration="2191000" />
+      <workItem from="1767716306591" duration="881000" />
     </task>
     <servers />
   </component>

@@ -23,7 +23,7 @@ public class ScorePopup : MonoBehaviour
         textMesh.color = color;
         textColor = color; 
         
-        //mouvement
+        // mouvement
         disappearTimer = DISAPPEAR_TIMER_MAX;
         moveVector = new Vector3(0, 1, 0); 
     }
@@ -31,7 +31,7 @@ public class ScorePopup : MonoBehaviour
     private void Update()
     {
         transform.position += moveVector * Time.deltaTime;
-        moveVector -= moveVector * 2f * Time.deltaTime;
+        moveVector -=  2f * Time.deltaTime * moveVector;
 
         // disparition
         disappearTimer -= Time.deltaTime;
