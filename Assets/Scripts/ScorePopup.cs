@@ -31,7 +31,7 @@ public class ScorePopup : MonoBehaviour
     private void Update()
     {
         transform.position += moveVector * Time.deltaTime;
-        moveVector -= moveVector * 2f * Time.deltaTime;
+        moveVector -=  2f * Time.deltaTime * moveVector;
 
         // disparition
         disappearTimer -= Time.deltaTime;
