@@ -12,8 +12,7 @@ public class LevelSelector : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        int n = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene((n+1)%SceneManager.sceneCountInBuildSettings);
+        SceneManager.LoadScene(0);
     }
     public void LoadLevel1()
     {
