@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dfcba3a6c2377743bbbaccddc1ddb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorePopup: {fileID: 0}
+  scorePopup: {fileID: 6272300248988164964, guid: 9d7f198c3b754c447aded21a79112e5c, type: 3}
   strength: 7
   score: 10
 --- !u!114 &-4610556532905565181

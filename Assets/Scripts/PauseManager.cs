@@ -9,7 +9,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField, Space] private LevelManager levelManager;
     [SerializeField] private GameObject gameOverMenu;
-    [SerializeField] private GameObject levelCompletedMenu;
+    [SerializeField] public GameObject levelCompletedMenu;
     [SerializeField, Space] private GameObject pauseMenuUI;
     [SerializeField] private Button pauseButton;
     [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
@@ -94,4 +94,7 @@ public class PauseManager : MonoBehaviour
         SceneManager.LoadScene((n+1)%SceneManager.sceneCountInBuildSettings);
         
     }
+    
+    
+    
 }
