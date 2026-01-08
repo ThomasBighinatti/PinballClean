@@ -6,7 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="92e9b411-0ccb-445f-801b-f43f29cb2b25" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BIGINATTI Thomas/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BIGINATTI Thomas/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScorePopup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScorePopup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Graphics/TextMesh Pro/Fonts/Montserrat-VariableFont_wght SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Graphics/TextMesh Pro/Fonts/Montserrat-VariableFont_wght SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level3.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bumper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bumper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EventController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EventController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/PC_RPAsset.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Settings/UniversalRenderPipelineGlobalSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +23,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1c4c6a0b0e1e4a1292a91700cf4526972b000/d1/90743d47/ForceMode.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Downloads/cheat_sheet_strcuturesDonnees.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DeathZone.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
@@ -113,6 +120,7 @@
       <workItem from="1765789736973" duration="426000" />
       <workItem from="1765790261035" duration="2191000" />
       <workItem from="1767716306591" duration="881000" />
+      <workItem from="1767870907999" duration="1537000" />
     </task>
     <servers />
   </component>

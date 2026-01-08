@@ -636,11 +636,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.3450825
+      value: 3.3408678
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.29492703
+      value: 0.29092488
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalScale.z
@@ -648,11 +648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.0926
+      value: -2.0955
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.8256
+      value: 0.82532
       objectReference: {fileID: 0}
     - target: {fileID: 7633370931071664515, guid: 50acfa476f7fb394382e872572e92f05, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3788,6 +3788,10 @@ PrefabInstance:
       propertyPath: score
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4993251464553646443, guid: 485fe1621f8f9144abc69c1f78204f38, type: 3}
+      propertyPath: strength
+      value: 3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5922005322733814107, guid: 485fe1621f8f9144abc69c1f78204f38, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3895,24 +3899,16 @@ MonoBehaviour:
   onTriggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1677809552}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      - {m_Target: {fileID: 1677809552}, m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine, m_MethodName: SetActive, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+    m_CallsDirty: 1
   onTriggerExitEvent:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onCollisionEnterEvent:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
 --- !u!135 &1379584726
 SphereCollider:
   m_ObjectHideFlags: 0

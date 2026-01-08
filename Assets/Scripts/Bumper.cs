@@ -18,7 +18,7 @@ public class Bumper : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         Vector3 direction = (other.transform.position - transform.position).normalized;
-        other.rigidbody.AddForce(direction * strength, ForceMode.Impulse);
+        other.rigidbody.AddForce(direction * strength, ForceMode.Impulse); //dépend de la masse du rigibody
         
         ScoreManager.instance.AddScore(score);
 

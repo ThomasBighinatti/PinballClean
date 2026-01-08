@@ -1,7 +1,7 @@
 
 using UnityEngine;
 using UnityEngine.Events;
-public class EventController : MonoBehaviour
+public class EventController : MonoBehaviour //pour le trigger
 {
     [SerializeField] UnityEvent onTriggerEnterEvent;
     [SerializeField] UnityEvent onTriggerExitEvent;
