@@ -88,6 +88,7 @@ public class PauseManager : MonoBehaviour
     
     public void NextLevel()
     {
+        gameManager.life = 4;
         Time.timeScale = 1f;
         levelCompletedMenu.SetActive(false);
         int n = SceneManager.GetActiveScene().buildIndex;

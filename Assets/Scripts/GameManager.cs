@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    [SerializeField] private int life = 4;
+    [SerializeField] public int life = 4;
     [SerializeField] GameObject prefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private TextMeshProUGUI ballsLeft;
